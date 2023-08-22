@@ -1,0 +1,61 @@
+{
+    "name": "@enea-entertainment/pixi-blend-modes-batch",
+    "version": "0.5.0",
+    "description": "Emulates BLEND_MODES.ADD using BLEND_MODES.NORMAL",
+    "author": "Martin Filo <npm@enea.sk> (https://www.enea.sk/)",
+    "homepage": "https://github.com/EneaEntertainment/pixi-blend-modes-batch#readme",
+    "license": "MIT",
+    "main": "index.js",
+    "type": "module",
+    "types": "index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/EneaEntertainment/pixi-blend-modes-batch.git"
+    },
+    "bugs": {
+        "url": "https://github.com/EneaEntertainment/pixi-blend-modes-batch/issues"
+    },
+    "keywords": [
+        "pixi.js",
+        "blend modes",
+        "batch"
+    ],
+    "volta": {
+        "node": "20.4.0",
+        "npm": "9.7.2"
+    },
+    "scripts": {
+        "lint": "eslint \"src/**/*.ts\"",
+        "lintfix": "eslint \"src/**/*.js\" --fix",
+        "lintfixDts": "eslint \"_dist/index.d.ts\" --fix --no-ignore",
+        "prebuild": "rimraf _dist && rimraf _dist-tsc",
+        "dts": "tsc --build tsconfig.json",
+        "cleanup": "rimraf _dist-tsc",
+        "build": "npm run dts && tsc && rollup -c && npm run cleanup && npm run lintfixDts && node ./utils/inject-global-mixins"
+    },
+    "peerDependencies": {
+        "@pixi/constants": "^6.5.10",
+        "@pixi/core": "^6.5.10",
+        "@pixi/display": "^6.5.10",
+        "@pixi/math": "^6.5.10",
+        "@pixi/sprite-tiling": "^6.5.10",
+        "@pixi/sprite": "^6.5.10",
+        "@pixi/utils": "^6.5.10"
+    },
+    "devDependencies": {
+        "@rollup/plugin-node-resolve": "^15.0.2",
+        "@types/node": "^18.11.11",
+        "@typescript-eslint/eslint-plugin": "^6.1.0",
+        "@typescript-eslint/parser": "^6.1.0",
+        "eslint-plugin-import": "^2.28.0",
+        "eslint": "^8.23.1",
+        "prepend": "^1.0.2",
+        "rimraf": "^3.0.2",
+        "rollup-plugin-copy": "^3.4.0",
+        "rollup-plugin-dts": "^5.3.0",
+        "rollup-plugin-esbuild": "^5.0.0",
+        "rollup-plugin-generate-package-json": "^3.2.0",
+        "rollup": "^3.20.6",
+        "typescript": "^5.1.6"
+    }
+}
