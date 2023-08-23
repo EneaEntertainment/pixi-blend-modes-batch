@@ -14,7 +14,7 @@ npm install --save-dev @enea-entertainment/pixi-blend-modes-batch
 
 [![NPM](https://nodei.co/npm/@enea-entertainment/pixi-blend-modes-batch.png?compact=true)](https://nodei.co/npm/@enea-entertainment/pixi-blend-modes-batch/)
 
-PixiJS v7: npm version ```^1.0.0```
+PixiJS v7: npm version ```^1.0.1```
 
 PixiJS v6: npm version ```^0.5.0```
 
