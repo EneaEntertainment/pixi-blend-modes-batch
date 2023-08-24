@@ -3,7 +3,9 @@
  Emulates BLEND_MODES.ADD using BLEND_MODES.NORMAL and batches sprites with these blend modes into a single draw call
  
  ### Notice:
- any blend mode other than NORMAL and ADD will break the batch
+ unless ```BlendModesBatchRenderer.forceAddBlend``` is set to ```true``` (default is ```false```) any blend mode other than BLEND_MODES.NORMAL and BLEND_MODES.ADD will break the batch.
+
+ If ```BlendModesBatchRenderer.forceAddBlend = true``` then all other blend modes except BLEND_MODES.NORMAL will be treated as BLEND_MODES.ADD
 
 ---
 ### Installation

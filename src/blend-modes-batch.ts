@@ -74,6 +74,13 @@ export class BlendModesBatchRenderer extends BatchRenderer
      */
     static intensity = 1;
 
+    /**
+     * forces additive blend mode
+     *
+     * if set to true, all other blend modes except BLEND_MODES.NORMAL will be treated as BLEND_MODES.ADD
+     */
+    static forceAddBlend = false;
+
     setShaderGenerator({ vertex = vert, fragment = frag }: { vertex?: string, fragment?: string } = {}): void
     {
         this.shaderGenerator = new BlendModesShaderGenerator(vertex, fragment);
@@ -100,7 +107,11 @@ export class BlendModesBatchRenderer extends BatchRenderer
 
         argb = argb & 0xfffffffe;
 
-        if (element.blendMode === BLEND_MODES.ADD)
+        if
+        (
+            (BlendModesBatchRenderer.forceAddBlend && element.blendMode !== BLEND_MODES.NORMAL) ||
+            element.blendMode === BLEND_MODES.ADD
+        )
             argb |= 1;
 
         for (let i = 0; i < vertexData.length; i += 2)
@@ -143,7 +154,11 @@ export class BlendModesBatchRenderer extends BatchRenderer
 
             let spriteBlendMode = premultiplyBlendMode[tex.alphaMode ? 1 : 0][sprite.blendMode];
 
-            if (spriteBlendMode === BLEND_MODES.ADD && tex.alphaMode)
+            if
+            (
+                (BlendModesBatchRenderer.forceAddBlend && spriteBlendMode !== BLEND_MODES.NORMAL) ||
+                (spriteBlendMode === BLEND_MODES.ADD && tex.alphaMode)
+            )
                 spriteBlendMode = BLEND_MODES.NORMAL;
 
             // @ts-ignore
