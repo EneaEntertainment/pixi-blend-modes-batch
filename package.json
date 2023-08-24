@@ -1,6 +1,6 @@
 {
     "name": "@enea-entertainment/pixi-blend-modes-batch",
-    "version": "0.5.0",
+    "version": "0.5.1",
     "description": "Emulates BLEND_MODES.ADD using BLEND_MODES.NORMAL",
     "author": "Martin Filo <npm@enea.sk> (https://www.enea.sk/)",
     "homepage": "https://github.com/EneaEntertainment/pixi-blend-modes-batch#readme",
