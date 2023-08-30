@@ -15,7 +15,7 @@
             // "preserveConstEnums": true,
             // Output and other settings
             "sourceMap": true, //Makes debugging waaay easier
-            "module": "ESNext", //Doesn't really mean anything. This is if you are making a library
+            "module": "ES6", //Doesn't really mean anything. This is if you are making a library
             "moduleResolution": "node",
             "resolveJsonModule": true,
             "esModuleInterop": true,
@@ -23,7 +23,7 @@
             "experimentalDecorators": true,
             "emitDecoratorMetadata": true,
             "skipLibCheck": true,
-            "target": "ESNext", //es5 = Internet Explorer and Everybody else. es6 = Everybody but Internet Explorer.
+            "target": "ES6", //es5 = Internet Explorer and Everybody else. es6 = Everybody but Internet Explorer.
             "downlevelIteration": true, //This is said to cause really really ugly code. Only enable it if you can't find a better way.
             "typeRoots": 
                 [
