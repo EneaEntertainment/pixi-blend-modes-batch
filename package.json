@@ -1,6 +1,6 @@
 {
     "name": "@enea-entertainment/pixi-blend-modes-batch",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Emulates BLEND_MODES.ADD using BLEND_MODES.NORMAL",
     "author": "Martin Filo <npm@enea.sk> (https://www.enea.sk/)",
     "homepage": "https://github.com/EneaEntertainment/pixi-blend-modes-batch#readme",
@@ -34,12 +34,12 @@
         "build": "npm run dts && tsc && rollup -c && npm run cleanup && npm run lintfixDts && node ./utils/inject-global-mixins"
     },
     "peerDependencies": {
-        "@pixi/constants": "^7.2.4",
-        "@pixi/core": "^7.2.4",
-        "@pixi/display": "^7.2.4",
-        "@pixi/sprite-tiling": "^7.2.4",
-        "@pixi/sprite": "^7.2.4",
-        "@pixi/utils": "^7.2.4"
+        "@pixi/constants": "^7.3.0",
+        "@pixi/core": "^7.3.0",
+        "@pixi/display": "^7.3.0",
+        "@pixi/sprite-tiling": "^7.3.0",
+        "@pixi/sprite": "^7.3.0",
+        "@pixi/utils": "^7.3.0"
     },
     "devDependencies": {
         "@rollup/plugin-node-resolve": "^15.0.2",
