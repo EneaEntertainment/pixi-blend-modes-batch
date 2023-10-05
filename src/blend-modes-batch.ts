@@ -27,7 +27,7 @@ void main(void)
     vTextureCoord = aTextureCoord;
     vTextureId = aTextureId;
     vColor = aColor * tint;
-    vColor.a *= (mod(aColor[0] * 255.0, 2.0) * -1.0 * intensity) + 1.0;
+    vColor.a *= 1.0 - mod(aColor[0] * 255.0, 2.0) * intensity;
 }
 `;
 

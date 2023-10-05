@@ -1,6 +1,6 @@
 {
     "name": "@enea-entertainment/pixi-blend-modes-batch",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Emulates BLEND_MODES.ADD using BLEND_MODES.NORMAL",
     "author": "Martin Filo <npm@enea.sk> (https://www.enea.sk/)",
     "homepage": "https://github.com/EneaEntertainment/pixi-blend-modes-batch#readme",
@@ -26,7 +26,7 @@
     },
     "scripts": {
         "lint": "eslint \"src/**/*.ts\"",
-        "lintfix": "eslint \"src/**/*.js\" --fix",
+        "lintfix": "eslint \"src/**/*.ts\" --fix",
         "lintfixDts": "eslint \"_dist/index.d.ts\" --fix --no-ignore",
         "prebuild": "rimraf _dist && rimraf _dist-tsc",
         "dts": "tsc --build tsconfig.json",
